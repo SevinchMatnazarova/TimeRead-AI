@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeRead AI - Aqlli Mutolaa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="logo">TimeRead <span>AI</span></a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="nav-link">Asosiy</a>
+                <a href="#about" class="nav-link">Haqida</a>
+                <a href="#contact" class="nav-link">Bog'lanish</a>
+            </div>
+            <a href="login.html" class="btn-primary inline-block">Kirish</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container mx-auto px-6 text-center text-white">
+            <h1 class="hero-title">Vaqtingizga mos mutolaa</h1>
+            <p class="hero-subtitle">
+                Sizda necha daqiqa borligini ayting, biz sizga mos kontentni tanlab beramiz.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <input type="number" placeholder="Daqiqani kiriting..." class="time-input">
+                <button class="btn-start">O'qishni boshlash</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" alt="Books" class="about-img">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="section-title">TimeRead AI nima?</h2>
+                    <p class="section-text">
+                        Biz axborot oqimi haddan tashqari tezlashgan asrda yashayapmiz. <strong>TimeRead AI</strong> — bu muammoni sun’iy intellekt yordamida hal qiluvchi platformadir.
+                    </p>
+                    <p class="section-text">
+                        Tizim sizning o‘qish tezligingizni tahlil qiladi va mavjud bo‘sh vaqtingizga mos ravishda kitobdan eng muhim qismlarni taqdim etadi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h3 class="text-2xl font-bold mb-6">Bog'lanish</h3>
+                    <div class="space-y-6">
+                        <p><i class="fas fa-envelope mr-2"></i> support@timeread.ai</p>
+                        <p><i class="fas fa-location-dot mr-2"></i> Khorezm, IT-Park</p>
+                        <p><i class="fab fa-telegram mr-2"></i> @TimeRead-AI</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Ismingiz" class="form-input">
+                        <input type="email" placeholder="Emailingiz" class="form-input">
+                        <textarea placeholder="Xabaringiz" rows="4" class="form-input"></textarea>
+                        <button class="btn-submit">Xabar yuborish</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
