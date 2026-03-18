@@ -1,147 +1,124 @@
-/* Umumiy sozlamalar */
-html {
-    scroll-behavior: smooth;
-}
+body { margin: 0; font-family: 'Inter', sans-serif; }
 
-body {
-    font-family: 'Inter', sans-serif;
-}
-
-/* Navigatsiya */
+/* Navbar */
 .navbar {
-    position: fixed;
-    width: 100%;
-    z-index: 50;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    padding: 15px 0; background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
 }
+.container-custom {
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.logo { font-size: 26px; font-weight: 800; color: #4f46e5; text-decoration: none; }
+.nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: #4b5563; font-weight: 600; transition: 0.3s; }
+.nav-links a.active, .nav-links a:hover { color: #4f46e5; }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #4f46e5;
+/* Hero orqa fon bilan */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover; background-position: center; background-attachment: fixed;
+    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
 }
-
-.logo span {
-    color: #111827;
-}
-
-.nav-link:hover {
-    color: #4f46e5;
-    transition: 0.3s;
-}
+.hero-content h1 { font-size: 4.5rem; font-weight: 900; margin-bottom: 20px; line-height: 1.1; }
+.hero-content h1 span { color: #818cf8; }
+.hero-content p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.9; }
 
 /* Tugmalar */
-.btn-primary {
-    background-color: #4f46e5;
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 9999px;
+.btn-primary { background: #4f46e5; color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+.btn-cta { background: #4f46e5; color: white; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.3s; }
+.btn-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4); }
+.btn-secondary { color: white; border: 2px solid white; padding: 16px 45px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-left: 15px; }
+
+/* Auth Sahifasi */
+.auth-body {
+    height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(rgba(79,70,229,0.8), rgba(79,70,229,0.8)), 
+                url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+}
+.auth-card {
+    background: white; padding: 40px; border-radius: 30px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); width: 100%; max-width: 400px;
+}
+.input-field {
+    width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #e5e7eb; border-radius: 15px; outline: none; box-sizing: border-box;
+}
+.btn-submit {
+    width: 100%; padding: 16px; border: none; border-radius: 15px; background: #4f46e5; color: white; font-weight: bold; cursor: pointer; font-size: 16px;
+}
+/* Oldingi CSS kodlaringizga qo'shimcha yoki almashtirish */
+
+.hero-contact {
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex; align-items: center; justify-content: center;
 }
 
-.btn-primary:hover {
-    background-color: #4338ca;
-}
-
-/* Hero Section */
-.hero-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin-bottom: 1.5rem;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: #e0e7ff;
-    max-width: 42rem;
-    margin: 0 auto 2.5rem;
-}
-
-.time-input {
-    padding: 1rem 1.5rem;
-    border-radius: 9999px;
-    color: #111827;
-    width: 100%;
-    max-width: 20rem;
-    outline: none;
-}
-
-.btn-start {
-    background-color: #facc15;
-    color: #312e81;
-    font-weight: 700;
-    padding: 1rem 2.5rem;
-    border-radius: 9999px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-/* About Section */
-.about-img {
-    border-radius: 1rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-.section-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 1.5rem;
-}
-
-.section-text {
-    color: #4b5563;
-    font-size: 1.125rem;
-    line-height: 1.75;
-    margin-bottom: 1.5rem;
-}
-
-/* Contact Section */
 .contact-card {
     background: white;
-    border-radius: 1.5rem;
-    display: flex;
-    overflow: hidden;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info {
-    background-color: #4f46e5;
-    color: white;
-    padding: 2.5rem;
-    width: 33.333%;
-}
-
-.contact-form-container {
-    padding: 2.5rem;
-    width: 66.666%;
-}
-
-.form-input {
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    outline: none;
+    max-width: 450px;
 }
 
-.form-input:focus {
-    border-color: #4f46e5;
+.form-title {
+    text-align: center;
+    font-size: 28px;
+    color: #1f2937;
+    margin-bottom: 5px;
 }
+
+.form-subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Select va boshqa maydonlar */
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+    background-color: #f9fafb;
+}
+
+.input-field:focus {
+    border-color: #4f46e5;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.h-32 { height: 120px; resize: none; }
 
 .btn-submit {
     width: 100%;
-    background-color: #4f46e5;
+    padding: 16px;
+    background: #4f46e5;
     color: white;
-    font-weight: 700;
-    padding: 0.75rem;
-    border-radius: 0.75rem;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
 }
